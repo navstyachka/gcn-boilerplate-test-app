@@ -1,0 +1,7 @@
+# This file will be commited into git.
+# Please do not save credentials in this file.
+
+[build]
+	base = ""
+	publish = "public/"
+	command = "yarn build"

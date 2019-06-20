@@ -1,0 +1,10 @@
+node_modules
+.cache/
+public/
+.DS_Store
+.idea/
+*.log
+contentful-import-error-log*
+.env
+.contentful.json
+cypress/snapshots
