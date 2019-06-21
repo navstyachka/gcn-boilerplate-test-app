@@ -8,3 +8,5 @@ contentful-import-error-log*
 .env
 .contentful.json
 cypress/snapshots
+.travis/*.key
+.travis/*.key.pub
