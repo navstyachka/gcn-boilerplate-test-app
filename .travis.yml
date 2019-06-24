@@ -1,27 +1,30 @@
 language: node_js
 node_js:
-  - "stable"
+  - stable
 cache:
   directories:
-    - ~/.npm
+    - "~/.npm"
     - node_modules
-    - .cache
+    - ".cache"
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  github-token: "$GITHUB_TOKEN"
   local_dir: public
   keep-history: true
   on:
     branch: master
 before_script:
-  - "yarn global add gatsby"
-  - "yarn"
+  - yarn global add gatsby
+  - yarn
 script:
-  - "yarn build"
+  - yarn build
 notifications:
   email:
     recipients:
       - navstyachka@gmail.com
     on_success: always
     on_failure: always
+before_install:
+  - openssl aes-256-cbc -K $encrypted_eef38ade5269_key -iv $encrypted_eef38ade5269_iv
+    -in deploy.key.enc -out deploy.key -d
